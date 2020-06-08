@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Curstkart</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<link rel="icon" href="fav.png">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav>
+      <div class="menu">
+        <ul>
+
+          <li> <a href="#" class="pull-left"><img src="fav.png" width="50px"></a></li>
+            <li><a href="#" class="menu-item">Home</a></li>
+              <li><a href="#" class="menu-item">About Us</a></li>
+                <li><a href="#" class="menu-item">Study material</a></li>
+                  <li><a href="#" class="menu-item">Testimonials</a></li>
+                    <li><a href="#" class="menu-item">Contact Us</a></li>
+                      <li><a href="#" class="menu-item">LogIn</a></li>
+                        <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                          <li><a href="#"><i class="fa fa-shopping-basket"></i></a></li>
+        </ul>
+        <div class="search-form">
+          <form>
+          <input type="text" name="" placeholder="search custkart">
+          </form>
+          </div>
+          <a class="close"><i class="fa fa-times"></i></a>
+      </div>
+
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#search').click(function(){
+          $('.menu-item').addClass('hide-item')
+            $('.search-form').addClass('active')
+            $('.close').addClass('active')
+              $('#search').hide()
+        })
+        $('.close').click(function(){
+          $('.menu-item').removeClass('hide-item')
+            $('.search-form').removeClass('active')
+            $('.close').removeClass('active')
+              $('#search').show()
+        })
+      })
+    </script>
+
+  </body>
+</html>
